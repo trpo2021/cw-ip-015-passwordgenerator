@@ -1,7 +1,7 @@
 #define CTEST_MAIN
 
 #include "ctest.h"
-#include "rand_capital_letter"
+#include "libpwgen/rand_capital_letter"
 
 using namespace std;
 int main(int argc, const char** argv){
