@@ -18,7 +18,7 @@ TEST_THIRDPARTY = test/thirdparty/
 
 .PHONY: pwgen
 
-$(PWGEN_BIN)pwgen: $(PWGEN_OBJ)pwgen.o $(LIBPWGEN_OBJ)libpwgen.a
+$(PWGEN_BIN)pwgenerator: $(PWGEN_OBJ)pwgen.o $(LIBPWGEN_OBJ)libpwgen.a
 	$(CXX) $(CFLAGS) -o $@ $^
 $(PWGEN_OBJ)pwgen.o: $(PWGEN_SRC)pwgen.cpp 
 	$(CXX) -c $(CFLAGS) -o $@ $^
