@@ -2,15 +2,17 @@
 #include <libpwgen/print_pass.h>
 #include <iostream>
 #include <ctime>
-#include <stdlib>
+#include <cstdlib>
 
 using namespace std;
 
-int quantity_pass_symbols;
 int main() {
 srand(time(0));
-char password[10];
-quantity_pass_symbols=10;
-for(int i=0;i<10;i++)password[i]=rand_capital_letter();
-print_pass(password);
+int quantity_pass_symbols=10;
+char *password=new char[quantity_pass_symbols];
+for(int i=0;i<quantity_pass_symbols;i++){
+password[i]=rand_capital_letter();
+}
+print_pass(password,quantity_pass_symbols);
 return 0;
+}
