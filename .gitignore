@@ -2,7 +2,6 @@
 *.swp
 *~
 *.o
-pwgen
 *.out
 *.exe
 *.a
