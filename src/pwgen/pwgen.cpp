@@ -4,6 +4,7 @@
 #include <libpwgen/print_pass.h>
 #include <libpwgen/rand_capital_letter.h>
 #include <libpwgen/rand_numeral.h>
+#include <libpwgen/rand_cursive_letter.h>
 
 using namespace std;
 
@@ -20,5 +21,10 @@ int main()
         password[i] = rand_numeral();
     }
     print_pass(password, quantity_pass_symbols);
+    for (int i = 0; i < quantity_pass_symbols; i++) {
+        password[i] = rand_cursive_letter();
+    }
+    print_pass(password, quantity_pass_symbols);
     return 0;
+
 }
