@@ -8,42 +8,19 @@
 #include <libpwgen/rand_cursive_letter_exclude.h>
 #include <libpwgen/rand_numeral.h>
 #include <libpwgen/rand_special_symbols.h>
+#include <libpwgen/requests_for_user.h>
+#include <libpwgen/random_character_password.h>
 
 using namespace std;
 const char SPECIALS_SYMBOLS[23]
         = {'!', '?', ',', '.', '+', ':', '=', ';', '-', '/', '"',
            '$', '%', '^', '&', ')', '(', '@', '[', ']', '<', '>'};
+int choice, quantity_pass, quantity_pass_symbols;
 
 int main()
 {
     srand(time(0));
-    int quantity_pass_symbols = 10;
-    char* password = new char[quantity_pass_symbols];
-    for (int i = 0; i < quantity_pass_symbols; i++) {
-        password[i] = rand_capital_letter();
-    }
-    print_pass(password, quantity_pass_symbols);
-    for (int i = 0; i < quantity_pass_symbols; i++) {
-        password[i] = rand_numeral();
-    }
-    print_pass(password, quantity_pass_symbols);
-    for (int i = 0; i < quantity_pass_symbols; i++) {
-        password[i] = rand_cursive_letter();
-    }
-    print_pass(password, quantity_pass_symbols);
-    for (int i = 0; i < quantity_pass_symbols; i++) {
-        password[i] = rand_capital_letter_exclude();
-    }
-    print_pass(password, quantity_pass_symbols);
-    for (int i = 0; i < quantity_pass_symbols; i++) {
-        password[i] = rand_special_symbols();
-    }
-    print_pass(password, quantity_pass_symbols);
-
-    for (int i = 0; i < quantity_pass_symbols; i++) {
-        password[i] = rand_cursive_letter_exclude();
-    }
-    print_pass(password, quantity_pass_symbols);
+    pass_randoms_symbols();
 
     return 0;
 }
