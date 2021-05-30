@@ -2,6 +2,7 @@
 
 #include "ctest.h"
 #include "libpwgen/rand_capital_letter.h"
+#include "libpwgen/rand_capital_letter_exclude.h"
 #include "libpwgen/rand_cursive_letter.h"
 #include "libpwgen/rand_numeral.h"
 
@@ -209,5 +210,23 @@ CTEST(rand_cursive_letter, result_cursive_10)
     char ch = rand_cursive_letter();
     if (ch >= 97 && ch <= 122)
         symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_capital_letter_exclude, check_exception_O_and_I)
+{
+    bool symbol = true;
+    char ch;
+    for (int i = 0; i < 1000; i++) {
+        ch = rand_capital_letter_exclude();
+        if (ch >= 65 && ch <= 90) {
+            if (ch == 'O' || ch == 'I') {
+                symbol = false;
+                break;
+            }
+        } else {
+            symbol = false;
+            break;
+        }
+    }
     ASSERT_TRUE(symbol);
 }
