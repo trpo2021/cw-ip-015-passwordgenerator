@@ -4,6 +4,7 @@
 #include "libpwgen/rand_capital_letter.h"
 #include "libpwgen/rand_capital_letter_exclude.h"
 #include "libpwgen/rand_cursive_letter.h"
+#include "libpwgen/rand_cursive_letter_exclude.h"
 #include "libpwgen/rand_numeral.h"
 #include "libpwgen/rand_special_symbols.h"
 
@@ -331,6 +332,24 @@ CTEST(rand_special_symbols, result_symbol_10)
     for (int i = 0; i < 23; i++) {
         if (ch == SPECIALS_SYMBOLS[i])
             symbol = true;
+    }
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter_exclude, check_exception_o_and_l_in_cursive_letter)
+{
+    bool symbol = true;
+    char ch;
+    for (int i = 0; i < 1000; i++) {
+        ch = rand_cursive_letter_exclude();
+        if (ch >= 97 && ch <= 122) {
+            if (ch == 'o' || ch == 'l') {
+                symbol = false;
+                break;
+            }
+        } else {
+            symbol = false;
+            break;
+        }
     }
     ASSERT_TRUE(symbol);
 }
