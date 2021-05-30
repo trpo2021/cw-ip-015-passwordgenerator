@@ -22,7 +22,7 @@ $(PWGEN_BIN)pwgenerator: $(PWGEN_OBJ)pwgen.o $(LIBPWGEN_OBJ)libpwgen.a
 	$(CXX) $(CFLAGS) -o $@ $^
 $(PWGEN_OBJ)pwgen.o: $(PWGEN_SRC)pwgen.cpp 
 	$(CXX) -c $(CFLAGS) -o $@ $^
-$(LIBPWGEN_OBJ)libpwgen.a: $(LIBPWGEN_OBJ)rand_capital_letter.o $(LIBPWGEN_OBJ)print_pass.o $(LIBPWGEN_OBJ)rand_numeral.o $(LIBPWGEN_OBJ)rand_cursive_letter.o
+$(LIBPWGEN_OBJ)libpwgen.a: $(LIBPWGEN_OBJ)rand_capital_letter.o $(LIBPWGEN_OBJ)print_pass.o $(LIBPWGEN_OBJ)rand_numeral.o $(LIBPWGEN_OBJ)rand_cursive_letter.o $(LIBPWGEN_OBJ)rand_capital_letter_exclude.o
 	ar rcs $@ $^
 $(LIBPWGEN_OBJ)rand_capital_letter.o: $(LIBPWGEN_SRC)rand_capital_letter.cpp
 	$(CXX) -c $(CFLAGS) -o $@ $^
@@ -32,6 +32,9 @@ $(LIBPWGEN_OBJ)rand_numeral.o: $(LIBPWGEN_SRC)rand_numeral.cpp
 	$(CXX) -c $(CFLAGS) -o $@ $^
 $(LIBPWGEN_OBJ)rand_cursive_letter.o: $(LIBPWGEN_SRC)rand_cursive_letter.cpp
 	$(CXX) -c $(CFLAGS) -o $@ $^
+$(LIBPWGEN_OBJ)rand_capital_letter_exclude.o: $(LIBPWGEN_SRC)rand_capital_letter_exclude.cpp
+	$(CXX) -c $(CFLAGS) -o $@ $^
+
 
 .PHONY: test
 
@@ -41,7 +44,7 @@ $(PWGEN_BIN)test.exe: $(TEST_OBJ)testpwgen.o $(TEST_OBJ)testlibpwgen.a
 	$(CXX) $(CFLAGS) -o $@ $^
 $(TEST_OBJ)testpwgen.o: $(TEST)testpwgen.cpp
 	$(CXX) -c $(CFLAGS) -o $@ $^
-$(TEST_OBJ)testlibpwgen.a: $(TEST_OBJ)rand_capital_letter.o $(TEST_OBJ)rand_numeral.o $(TEST_OBJ)rand_cursive_letter.o
+$(TEST_OBJ)testlibpwgen.a: $(TEST_OBJ)rand_capital_letter.o $(TEST_OBJ)rand_numeral.o $(TEST_OBJ)rand_cursive_letter.o $(TEST_OBJ)rand_capital_letter_exclude.o
 	ar rcs $@ $^
 $(TEST_OBJ)rand_capital_letter.o: $(LIBPWGEN_SRC)rand_capital_letter.cpp
 	$(CXX) -c $(CFLAGS) -o $@ $^
@@ -49,6 +52,9 @@ $(TEST_OBJ)rand_numeral.o: $(LIBPWGEN_SRC)rand_numeral.cpp
 	$(CXX) -c $(CFLAGS) -o $@ $^
 $(TEST_OBJ)rand_cursive_letter.o: $(LIBPWGEN_SRC)rand_cursive_letter.cpp
 	$(CXX) -c $(CFLAGS) -o $@ $^
+$(TEST_OBJ)rand_capital_letter_exclude.o: $(LIBPWGEN_SRC)rand_capital_letter_exclude.cpp
+	$(CXX) -c $(CFLAGS) -o $@ $^
+
 	
 .PHONY: clean
 
