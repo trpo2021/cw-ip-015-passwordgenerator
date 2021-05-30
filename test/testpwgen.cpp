@@ -3,6 +3,8 @@
 #include "ctest.h"
 #include "libpwgen/rand_capital_letter.h"
 #include "libpwgen/rand_numeral.h"
+#include "libpwgen/rand_cursive_letter.h"
+
 using namespace std;
 int main(int argc, const char** argv)
 {
@@ -129,3 +131,84 @@ CTEST(rand_numeral, resulting_numeral_10)
         symbol = true;
     ASSERT_TRUE(symbol);
 }
+CTEST(rand_cursive_letter, result_cursive_1)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_2)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_3)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_4)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_5)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_6)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_7)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_8)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_9)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+CTEST(rand_cursive_letter, result_cursive_10)
+{
+    bool symbol;
+    char ch = rand_cursive_letter();
+    if (ch >= 97 && ch <= 122)
+        symbol = true;
+    ASSERT_TRUE(symbol);
+}
+
