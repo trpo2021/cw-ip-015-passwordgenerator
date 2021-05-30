@@ -9,7 +9,9 @@
 #include <libpwgen/rand_special_symbols.h>
 
 using namespace std;
-const char SPECIALS_SYMBOLS[23] = { '!', '?', ',', '.', '+', ':', '=', ';', '-', '/', '"', '$', '%', '^', '&', ')', '(', '@', '[', ']', '<', '>' };
+const char SPECIALS_SYMBOLS[23]
+        = {'!', '?', ',', '.', '+', ':', '=', ';', '-', '/', '"',
+           '$', '%', '^', '&', ')', '(', '@', '[', ']', '<', '>'};
 
 int main()
 {
@@ -33,7 +35,7 @@ int main()
     }
     print_pass(password, quantity_pass_symbols);
     print_pass(password, quantity_pass_symbols);
-     for (int i = 0; i < quantity_pass_symbols; i++) {
+    for (int i = 0; i < quantity_pass_symbols; i++) {
         password[i] = rand_special_symbols();
     }
     print_pass(password, quantity_pass_symbols);

@@ -8,7 +8,9 @@
 #include "libpwgen/rand_special_symbols.h"
 
 using namespace std;
-const char SPECIALS_SYMBOLS[23] = { '!', '?', ',', '.', '+', ':', '=', ';', '-', '/', '"', '$', '%', '^', '&', ')', '(', '@', '[', ']', '<', '>' };
+const char SPECIALS_SYMBOLS[23]
+        = {'!', '?', ',', '.', '+', ':', '=', ';', '-', '/', '"',
+           '$', '%', '^', '&', ')', '(', '@', '[', ']', '<', '>'};
 int main(int argc, const char** argv)
 {
     return ctest_main(argc, argv);
@@ -236,89 +238,99 @@ CTEST(rand_special_symbols, result_symbol_1)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_2)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_3)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_4)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_5)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_6)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_7)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_8)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_9)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
 CTEST(rand_special_symbols, result_symbol_10)
 {
     bool symbol;
     char ch = rand_cursive_letter();
-    for (int i=0; i<23; i++) {
-    	if (ch==SPECIALS_SYMBOLS[i]) symbol=true;
-	}
+    for (int i = 0; i < 23; i++) {
+        if (ch == SPECIALS_SYMBOLS[i])
+            symbol = true;
+    }
     ASSERT_TRUE(symbol);
 }
