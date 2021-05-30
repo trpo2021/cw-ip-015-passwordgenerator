@@ -129,4 +129,3 @@ CTEST(rand_numeral, resulting_numeral_10)
         symbol = true;
     ASSERT_TRUE(symbol);
 }
-
