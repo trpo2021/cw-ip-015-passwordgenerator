@@ -3,8 +3,8 @@
 #include <iostream>
 #include <libpwgen/print_pass.h>
 #include <libpwgen/rand_capital_letter.h>
-#include <libpwgen/rand_numeral.h>
 #include <libpwgen/rand_cursive_letter.h>
+#include <libpwgen/rand_numeral.h>
 
 using namespace std;
 
@@ -26,5 +26,4 @@ int main()
     }
     print_pass(password, quantity_pass_symbols);
     return 0;
-
 }

@@ -2,8 +2,8 @@
 
 #include "ctest.h"
 #include "libpwgen/rand_capital_letter.h"
-#include "libpwgen/rand_numeral.h"
 #include "libpwgen/rand_cursive_letter.h"
+#include "libpwgen/rand_numeral.h"
 
 using namespace std;
 int main(int argc, const char** argv)
@@ -211,4 +211,3 @@ CTEST(rand_cursive_letter, result_cursive_10)
         symbol = true;
     ASSERT_TRUE(symbol);
 }
-
