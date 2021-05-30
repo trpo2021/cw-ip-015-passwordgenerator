@@ -8,8 +8,8 @@
 #include <libpwgen/rand_cursive_letter_exclude.h>
 #include <libpwgen/rand_numeral.h>
 #include <libpwgen/rand_special_symbols.h>
-#include <libpwgen/requests_for_user.h>
 #include <libpwgen/random_character_password.h>
+#include <libpwgen/requests_for_user.h>
 
 using namespace std;
 const char SPECIALS_SYMBOLS[23]
