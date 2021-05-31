@@ -15,7 +15,7 @@ using namespace std;
 
 void pass_choice_symbols()
 {
-    system("cls");
+    system("clear");
     int quantity_rand_capital_letter, quantity_rand_cursive_letter,
             quantity_rand_numeral, quantity_rand_special_symbols;
     cout << "Password type: with a choice of characters" << endl;

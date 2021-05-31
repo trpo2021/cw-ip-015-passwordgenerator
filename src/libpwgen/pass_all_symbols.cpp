@@ -16,7 +16,7 @@ using namespace std;
 
 void pass_all_symbols()
 {
-    system("cls");
+    system("clear");
     cout << "Password with all characters:" << endl;
     int choice = exclude_pass_symbols();
     int quantity_pass_symbols = query_quantity_pass_symbols(choice);
