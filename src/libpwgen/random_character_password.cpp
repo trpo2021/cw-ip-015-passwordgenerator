@@ -43,7 +43,7 @@ void fill_rand_symbols(
 }
 void pass_randoms_symbols()
 {
-    system("cls");
+    system("clear");
     cout << "Random character password:" << endl;
     int choice = exclude_pass_symbols();
     int quantity_pass_symbols = query_quantity_pass_symbols(choice);
