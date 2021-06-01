@@ -39,5 +39,8 @@ void pass_all_symbols()
             swap(password[i], password[rand() % quantity_pass_symbols]);
         }
         print_pass(password, quantity_pass_symbols);
-    }
+    
+   }
+    delete [] password;
+    password = NULL;
 }
