@@ -54,4 +54,6 @@ void pass_randoms_symbols()
         fill_rand_symbols(password, marker, choice, quantity_pass_symbols);
         print_pass(password, quantity_pass_symbols);
     }
+    delete[] password;
+    password = NULL;
 }

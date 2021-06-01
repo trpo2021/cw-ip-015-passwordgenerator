@@ -62,4 +62,7 @@ void pass_choice_symbols()
         }
         print_pass(password, quantity_pass_symbols);
     }
+
+    delete[] password;
+    password = NULL;
 }
